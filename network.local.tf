@@ -29,5 +29,16 @@ locals  {
             subnet_names    = ["develop"]
             subnet_prefixes = ["10.116.128.0/24"]
         }
+
+        develop_to_core_peering = {
+            name                         = "develop_to_core"
+            allow_virtual_network_access = true
+        }
+
+        core_to_develop_peering = {
+            name                         = "core_to_develop"
+            allow_virtual_network_access = true
+        }
+
     }
 }

@@ -41,9 +41,9 @@ data "azurerm_subnet" "core_subnet" {
 #     virtual_network_name = "${module.external_vnet.vnet_name}"
 # }
 
-# data "azurerm_subnet" "develop_subnet" {
-#     count                = "${length(module.develop_vnet.subnet_names)}"
-#     resource_group_name  = "${module.resource_group.name}"
-#     name                 = "${module.develop_vnet.subnet_names[count.index]}"
-#     virtual_network_name = "${module.develop_vnet.vnet_name}"
-# }
+data "azurerm_subnet" "develop_subnet" {
+    count                = "${length(module.develop_vnet.subnet_names)}"
+    resource_group_name  = "${module.resource_group.name}"
+    name                 = "${module.develop_vnet.subnet_names[count.index]}"
+    virtual_network_name = "${module.develop_vnet.vnet_name}"
+}

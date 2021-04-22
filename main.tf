@@ -20,7 +20,7 @@ If you need to use container to store your tfstate,you can open this block.
 
 # terraform {
 #     backend "azurerm" {
-#         resource_group_name   = "prod-lafite-gen-2"
+#         resource_group_name   = "<rg_name>"
 #         storage_account_name  = "<storage_account_name>"
 #         container_name        = "<container_name>"
 #         key                   = "terraform.tfstate"
